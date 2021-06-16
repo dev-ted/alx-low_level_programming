@@ -1,1 +1,1 @@
-This repository contains the alx low level programming projects
+This repository contains the alx low level programming projects.
