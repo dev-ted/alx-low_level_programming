@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc export $CFILE -o c \
