@@ -1,1 +1,1 @@
-# This directory contains scripts that do the following functions: 
+# repository for the alx low level programming projects
