@@ -56,7 +56,7 @@ int check_path(char *s1, char *s2)
 }
 
 /**
- * *move - moves the current char past the *
+ * *move_char - moves the current char past the *
  * @s2: string to iterate over
  *
  * Return: the address of the character after the *
