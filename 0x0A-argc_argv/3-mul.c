@@ -1,30 +1,5 @@
-#include "holberton.h"
 #include <stdio.h>
-
-/**
- * main - multiplies 2 numbers.
- * @argc: The number of command line arguments
- * @argv: An array containing the program command line arguments
- *
- * Return: always (0)
- */
-int main(int argc, char *argv[])
-{
-	int a;
-	int b;
-	int sum;
-
-	if (argc < 3 || argc > 3)
-	{
-		printf("error\n");
-		return (1);
-	}
-	a = _atoi(argv[1]);
-	b = _atoi(argv[2]);
-	sum = a * b;
-	printf("%d\n", sum);
-	return (0);
-}
+#include "holberton.h"
 
 /**
  * _atoi - converts a string to an integer
@@ -69,4 +44,30 @@ int _atoi(char *s)
 		return (0);
 
 	return (n);
+}
+
+/**
+ * main - multiplies two numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: 0 (Success), 1 (Error)
+ */
+int main(int argc, char *argv[])
+{
+	int result, num1, num2;
+
+	if (argc < 3 || argc > 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	result = num1 * num2;
+
+	printf("%d\n", result);
+
+	return (0);
 }
