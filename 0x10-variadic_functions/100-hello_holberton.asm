@@ -1,26 +1,14 @@
-%define sys_write 1
-%define stdout 1
+section     .text
+    global      main
 
-%define sys_exit 60
-%define success 0
+main:
+    mov     edx,len
+    mov     ecx,msg
+    mov     ebx,1
+    mov     eax,4
+    int     0x80
 
-%define nl 10
+section     .data
+msg     db  'Hello, Holberton',0xa
+len     equ $ - msg
 
-section .data
-
-    message db "Hello, Holberton", nl
-    message_len equ $-message
-
-section .text
-
-global _start
-_start:
-    mov rax, sys_write
-    mov rdi, stdout
-    mov rsi, message
-    mov rdx, message_len
-    syscall
-
-    mov rax, sys_exit
-    mov rdi, success
-    syscall
